@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-import {View,StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import OpacityAnimation from './OpacityAnimation';
+import TransformAnimation from './TransformAnimation';
 
 export default class App extends Component {
   render() {
     return (
       <View style={this.styles.container}>
-        <OpacityAnimation />
+        <TransformAnimation />
       </View>
     );
   }
