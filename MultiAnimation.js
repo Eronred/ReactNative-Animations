@@ -1,36 +1,40 @@
 import React, {Component} from 'react';
 import {
+  Text,
   View,
   TouchableWithoutFeedback,
-  StyleSheet,
   Animated,
-  Text,
+  StyleSheet,
 } from 'react-native';
-export default class ScaleAnimation extends Component {
+
+export default class MultiAnimation extends Component {
   state = {
-    animationScale: new Animated.Value(0.5),
+    animationWidth: new Animated.Value(50),
+    animationHeight: new Animated.Value(50),
   };
 
   startScaleAnimation = () => {
-    Animated.timing(this.state.animationScale, {
+    Animated.timing(this.state.animationWidth, {
       duration: 300,
-      toValue: 2,
-    }).start();
+      toValue: 400,
+    }).start(() =>
+      Animated.timing(this.state.animationHeight, {
+        duration: 300,
+        Value: 350,
+      }).start(),
+    );
   };
   render() {
     const animatedStylesScale = {
-      transform: [
-        {
-          scaleX: this.state.animationScale,
-        },
-      ],
+      width: this.state.animationWidth,
+      height: this.state.animationHeight,
     };
 
     return (
       <View style={styles.container}>
         <TouchableWithoutFeedback onPress={this.startScaleAnimation}>
           <Animated.View style={[styles.myBox, animatedStylesScale]}>
-            <Text>Scale me</Text>
+            <Text>Translate me +300Y</Text>
           </Animated.View>
         </TouchableWithoutFeedback>
       </View>
@@ -45,8 +49,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   myBox: {
-    width: 200,
-    height: 200,
     backgroundColor: '#FFC107',
     justifyContent: 'center',
     alignItems: 'center',

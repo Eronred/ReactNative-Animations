@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
-import OpacityAnimation from './OpacityAnimation';
+
 import TransformAnimation from './TransformAnimation';
 import ScaleAnimation from './ScaleAnimation';
+import MultiAnimation from './MultiAnimation';
 export default class App extends Component {
   render() {
     return (
       <View style={this.styles.container}>
-        <ScaleAnimation />
+        <MultiAnimation />
       </View>
     );
   }
