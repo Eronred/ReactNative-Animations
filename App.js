@@ -1,14 +1,17 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 
-import TransformAnimation from './TransformAnimation';
-import ScaleAnimation from './ScaleAnimation';
-import MultiAnimation from './MultiAnimation';
-import Interpolate from './Interpolate';
+import TransformAnimation from './src/animations/TransformAnimation';
+import ScaleAnimation from './src/animations/ScaleAnimation';
+import MultiAnimation from './src/animations/MultiAnimation';
+import Interpolate from './src/animations/Interpolate';
+
 export default class App extends Component {
   render() {
     return (
       <View style={this.styles.container}>
+        /** * Just add animation component you want to use */
         <Interpolate />
       </View>
     );
