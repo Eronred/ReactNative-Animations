@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React, {Component} from 'react';
 import {
   Text,
@@ -10,21 +9,21 @@ import {
 
 export default class TransformAnimation extends Component {
   state = {
-    transformAnimation: new Animated.Value(0),
+    animation: new Animated.Value(0),
   };
 
   startTranformAnimation = () => {
-    Animated.timing(this.state.transformAnimation, {
-      toValue: 200,
+    Animated.timing(this.state.animation, {
+      toValue: 300,
       duration: 1000,
     }).start();
   };
 
   render() {
     const animatedStylesTransform = {
-      transformAnim: [
+      transform: [
         {
-          translateY: this.state.transformAnimation,
+          translateY: this.state.animation,
         },
       ],
     };
@@ -32,7 +31,7 @@ export default class TransformAnimation extends Component {
       <View style={this.styles.container}>
         <TouchableWithoutFeedback onPress={this.startTranformAnimation}>
           <Animated.View style={[this.styles.myBox, animatedStylesTransform]}>
-            <Text>Opacity me</Text>
+            <Text>Translate me +300Y</Text>
           </Animated.View>
         </TouchableWithoutFeedback>
       </View>
