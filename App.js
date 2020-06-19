@@ -6,13 +6,12 @@ import TransformAnimation from './src/animations/TransformAnimation';
 import ScaleAnimation from './src/animations/ScaleAnimation';
 import MultiAnimation from './src/animations/MultiAnimation';
 import Interpolate from './src/animations/Interpolate';
-
+import RotateAnimation from './src/animations/RotateAnimation';
 export default class App extends Component {
   render() {
     return (
       <View style={this.styles.container}>
-        /** * Just add animation component you want to use */
-        <Interpolate />
+        <RotateAnimation />
       </View>
     );
   }

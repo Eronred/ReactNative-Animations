@@ -52,5 +52,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFC107',
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 25,
   },
 });

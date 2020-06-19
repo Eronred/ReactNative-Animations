@@ -51,6 +51,7 @@ export default class Interpolate extends Component {
       backgroundColor: '#FFC107',
       justifyContent: 'center',
       alignItems: 'center',
+      borderRadius: 25,
     },
   });
 }

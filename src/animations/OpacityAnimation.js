@@ -49,6 +49,7 @@ export default class OpacityAnimation extends Component {
       backgroundColor: '#FFC107',
       justifyContent: 'center',
       alignItems: 'center',
+      borderRadius: 23,
     },
   });
 }
