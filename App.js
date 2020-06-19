@@ -4,11 +4,12 @@ import {View, StyleSheet} from 'react-native';
 import TransformAnimation from './TransformAnimation';
 import ScaleAnimation from './ScaleAnimation';
 import MultiAnimation from './MultiAnimation';
+import Interpolate from './Interpolate';
 export default class App extends Component {
   render() {
     return (
       <View style={this.styles.container}>
-        <MultiAnimation />
+        <Interpolate />
       </View>
     );
   }
